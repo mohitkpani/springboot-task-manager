@@ -1,9 +1,8 @@
 package com.task_manager.dto;
 
-public record TaskDTO(
+public record TaskRequestDTO(
 		String title,
 		String description,
-		Boolean completed
-		) {
+		Boolean completed) {
 
 }

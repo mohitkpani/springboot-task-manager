@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 45px 22px;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  color: white;
+  border-radius: 15px;
+  font-size: 27px;
+  font-weight: 700;
+  box-shadow: 0 7px 20px #7c3aed35;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #241747;
+}
+
+.header h1 span {
+  color: #8b5cf6;
+}
+
+.header p {
+  margin-top: 9px;
+  color: #89829d;
+  font-size: 14px;
+}
+
+.task-form,
+.tasks-section {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #ece7fa;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 30px #30205a08;
+}
+
+.task-form h2,
+.section-header h2 {
+  font-size: 17px;
+  color: #30234e;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.task-form input,
+.task-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e6e0f4;
+  border-radius: 10px;
+  background: #fcfbff;
+  color: #30234e;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  border-color: #9b7aef;
+  box-shadow: 0 0 0 3px #8b5cf615;
+}
+
+.task-form textarea {
+  resize: vertical;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+  color: #aaa2bd;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(100deg, #8b5cf6, #7138df);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 13px #7c3aed25;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px #7c3aed35;
+}
+
+.add-btn span {
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header h2 {
+  margin-bottom: 17px;
+}
+
+.task-count {
+  background: #f1ebff;
+  color: #7545d5;
+  border-radius: 20px;
+  padding: 6px 11px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 0;
+  border-top: 1px solid #f0edf7;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #cfc3eb;
+  border-radius: 7px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 13px;
+}
+
+.checkbox.checked {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-info h3 {
+  margin: 0 0 6px;
+  color: #342650;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-info p {
+  margin: 0;
+  color: #9991aa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.completed .task-info h3 {
+  color: #a49bb4;
+  text-decoration: line-through;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 9px;
+  background: #f6f2ff;
+  color: #8157dc;
+  font-size: 19px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: #eae0ff;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  color: #a29ab4;
+  font-size: 11px;
+}
+
+footer span {
+  color: #8b5cf6;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 30px 14px;
+  }
+
+  .task-form,
+  .tasks-section {
+    padding: 20px 16px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+}
+
+.empty-message {
+  text-align: center;
+  padding: 22px 0;
+  color: #9991aa;
+  font-size: 13px;
+}
+
+.task-done {
+  text-decoration: line-through;
+  color: #a49bb4 !important;
+}
+
+.checkbox {
+  cursor: pointer;
+  padding: 0;
+  background: white;
+}
