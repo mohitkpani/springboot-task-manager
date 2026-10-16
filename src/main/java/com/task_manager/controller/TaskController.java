@@ -22,7 +22,9 @@ import com.task_manager.service.TaskService;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = {"http://localhost:5173",  "http://192.168.31.222:5173"})
+@CrossOrigin(origins = { "http://localhost:5173",
+        "http://192.168.31.222:5173",
+        "https://springboot-task-manager.vercel.app" })
 public class TaskController {
 
     private final TaskService taskService;
@@ -59,8 +61,7 @@ public class TaskController {
             @PathVariable Long id,
             @RequestBody TaskRequestDTO taskDTO) {
 
-        TaskResponseDTO response =
-                taskService.updateTaskPartially(id, taskDTO);
+        TaskResponseDTO response = taskService.updateTaskPartially(id, taskDTO);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
@@ -70,8 +71,7 @@ public class TaskController {
             @PathVariable Long id,
             @RequestBody TaskRequestDTO taskDTO) {
 
-        TaskResponseDTO response =
-                taskService.updateTaskFully(id, taskDTO);
+        TaskResponseDTO response = taskService.updateTaskFully(id, taskDTO);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
