@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-const API_URL = 'http://192.168.31.222:8080/api/tasks'
+const API_URL = `${import.meta.env.VITE_API_URL || 'http://localhost:8080'}/api/tasks`
 
 function App() {
   const [title, setTitle] = useState('')
