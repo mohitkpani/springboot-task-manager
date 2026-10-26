@@ -2,6 +2,14 @@
 
 Taskly is a full-stack task management web application built with **React, Spring Boot, and MySQL**. It provides a clean, modern interface to create, view, edit, complete, and delete tasks.
 
+## 🚀 Live Demo
+
+**Try Taskly here:** [https://springboot-task-manager.vercel.app](https://springboot-task-manager.vercel.app)
+
+**Backend API:** [https://springboot-task-manager-1-8hsm.onrender.com](https://springboot-task-manager-1-8hsm.onrender.com)
+
+> Note: The backend runs on Render's free instance, which may sleep after inactivity. The database is currently hosted on an Aiven trial.
+
 ## ✨ Features
 
 - ➕ Create tasks with a title and description
@@ -11,7 +19,8 @@ Taskly is a full-stack task management web application built with **React, Sprin
 - 🗑️ Delete tasks
 - 💾 Persistent database storage
 - 🎨 Modern purple UI with custom favicon
-- 📱 Access from other devices on the same Wi-Fi during development
+- ☁️ Cloud deployment with Vercel, Render, and Aiven
+- 📱 Responsive interface for desktop and mobile
 
 ## 🛠️ Tech Stack
 
@@ -21,6 +30,7 @@ Taskly is a full-stack task management web application built with **React, Sprin
 - JavaScript
 - HTML5 and CSS3
 - Vite
+- Vercel
 
 **Backend**
 
@@ -30,6 +40,7 @@ Taskly is a full-stack task management web application built with **React, Sprin
 - Spring Data JPA
 - Hibernate ORM
 - Maven
+- Render
 
 **Database and Tools**
 
@@ -38,6 +49,7 @@ Taskly is a full-stack task management web application built with **React, Sprin
 - Git and GitHub
 - Visual Studio Code
 - Spring Tool Suite (STS)
+- Aiven
 
 ## 📁 Project Structure
 
@@ -50,13 +62,16 @@ task-manager/
 │       │   ├── dto/
 │       │   ├── entity/
 │       │   ├── repository/
+│       │   ├── security/
 │       │   └── service/
 │       └── resources/
+│           └── application.properties
 ├── frontend/
 │   ├── public/
 │   ├── src/
 │   ├── package.json
 │   └── index.html
+├── Dockerfile
 ├── pom.xml
 ├── .gitignore
 └── README.md
@@ -67,7 +82,7 @@ task-manager/
 - Java 21
 - Maven or the included Maven Wrapper
 - Node.js and npm
-- MySQL Server
+- MySQL-compatible database
 - Git
 
 ## 🚀 Getting Started
@@ -79,17 +94,25 @@ git clone https://github.com/mohitkpani/springboot-task-manager.git
 cd springboot-task-manager
 ```
 
-### 2. Configure MySQL
+### 2. Configure the database
 
-Create the database:
+For local development, create a MySQL database:
 
 ```sql
 CREATE DATABASE task_manager_db;
 ```
 
-Configure your database connection in `src/main/resources/application.properties`.
+Configure the database connection in `src/main/resources/application.properties`.
 
-Use your local database credentials and avoid committing passwords or other secrets to GitHub.
+The application supports environment variables for database configuration:
+
+- `DB_HOST`
+- `DB_PORT`
+- `DB_NAME`
+- `DB_USERNAME`
+- `DB_PASSWORD`
+
+Use your own database credentials locally. Never commit passwords or other secrets to GitHub.
 
 ### 3. Start the Spring Boot backend
 
@@ -101,7 +124,7 @@ On Windows PowerShell, run from the project root:
 
 Alternatively, run the project through Spring Tool Suite.
 
-Backend URL: `http://localhost:8080`
+Local backend URL: `http://localhost:8080`
 
 ### 4. Start the React frontend
 
@@ -115,11 +138,11 @@ npm run dev
 
 Open the URL printed by Vite, usually `http://localhost:5173`.
 
-Keep the frontend and backend running while using the application.
+For local development, configure `VITE_API_URL` if needed to point to the local backend.
 
 ## 🔌 REST API Endpoints
 
-Base URL: `http://localhost:8080/api/tasks`
+**Local base URL:** `http://localhost:8080/api/tasks`
 
 | Method | Endpoint          | Description             |
 | ------ | ----------------- | ----------------------- |
@@ -140,17 +163,15 @@ The API can be tested using Postman.
 4. Spring Data JPA interacts with MySQL.
 5. The API returns JSON responses, and React updates the UI.
 
-## 📱 Testing on a Phone
+## ☁️ Deployment
 
-During development, you can access Taskly from another device on the same Wi-Fi by starting Vite with:
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** Aiven MySQL
 
-```bash
-npm run dev -- --host 0.0.0.0
-```
+The frontend uses the `VITE_API_URL` environment variable to communicate with the deployed backend.
 
-Open the Network URL shown in the terminal on your phone. The computer must remain on, with both servers running.
-
-This setup is for local testing, not public deployment.
+The database currently uses an Aiven trial. Long-term availability depends on the database hosting plan and its limits.
 
 ## 🔮 Future Improvements
 
@@ -158,7 +179,6 @@ This setup is for local testing, not public deployment.
 - Search tasks by title
 - User authentication
 - Task priorities and due dates
-- Cloud deployment
 
 ## 👨‍💻 Author
 
