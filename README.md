@@ -1,14 +1,30 @@
-# 💜 Taskly — Full-Stack Task Manager
+<p align="center">
+  <img src="frontend/public/favicon.svg" alt="Taskly Logo" width="100" />
+</p>
 
-Taskly is a full-stack task management web application built with **React, Spring Boot, and MySQL**. It provides a clean, modern interface to create, view, edit, complete, and delete tasks.
+<h1 align="center">💜 Taskly — Full-Stack Task Manager</h1>
+
+<p align="center">
+  <strong>A little progress every day.</strong>
+</p>
+
+<p align="center">
+  A full-stack task management application built with <strong>React, Spring Boot, and MySQL</strong>.
+</p>
+
+<p align="center">
+  <a href="https://springboot-task-manager.vercel.app">🚀 Live Demo</a> ·
+  <a href="https://github.com/mohitkpani/springboot-task-manager">GitHub Repository</a>
+</p>
+
+---
 
 ## 🚀 Live Demo
 
-**Try Taskly here:** [https://springboot-task-manager.vercel.app](https://springboot-task-manager.vercel.app)
+- **Frontend:** https://springboot-task-manager.vercel.app
+- **Backend API:** https://springboot-task-manager-1-8hsm.onrender.com
 
-**Backend API:** [https://springboot-task-manager-1-8hsm.onrender.com](https://springboot-task-manager-1-8hsm.onrender.com)
-
-> Note: The backend runs on Render's free instance, which may sleep after inactivity. The database is currently hosted on an Aiven trial.
+> Note: The Render free instance may sleep after inactivity. The database is currently hosted on an Aiven trial.
 
 ## ✨ Features
 
@@ -104,7 +120,7 @@ CREATE DATABASE task_manager_db;
 
 Configure the database connection in `src/main/resources/application.properties`.
 
-The application supports environment variables for database configuration:
+The application supports these environment variables:
 
 - `DB_HOST`
 - `DB_PORT`
@@ -124,7 +140,7 @@ On Windows PowerShell, run from the project root:
 
 Alternatively, run the project through Spring Tool Suite.
 
-Local backend URL: `http://localhost:8080`
+Local backend URL: http://localhost:8080
 
 ### 4. Start the React frontend
 
@@ -136,7 +152,7 @@ npm install
 npm run dev
 ```
 
-Open the URL printed by Vite, usually `http://localhost:5173`.
+Open the URL printed by Vite, usually http://localhost:5173.
 
 For local development, configure `VITE_API_URL` if needed to point to the local backend.
 
