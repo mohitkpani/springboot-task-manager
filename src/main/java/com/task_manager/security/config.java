@@ -15,9 +15,9 @@ public class config {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins(
+                        .allowedOriginPatterns(
                                 "https://springboot-task-manager.vercel.app",
-                                "https://springboot-task-manager-h5es3ze8-mohitkpanis-projects.vercel.app",
+                                "https://springboot-task-manager-*.vercel.app",
                                 "http://localhost:5173",
                                 "http://192.168.31.222:5173")
                         .allowedMethods(
