@@ -16,7 +16,6 @@
   <a href="https://springboot-task-manager.vercel.app">🚀 Live Demo</a> ·
   <a href="https://github.com/mohitkpani/springboot-task-manager">GitHub Repository</a>
 </p>
----
 
 ## 🚀 Live Demo
 
