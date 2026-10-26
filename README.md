@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="frontend/public/favicon.svg" alt="Taskly Logo" width="100" />
+  <img src="frontend/public/favicon.svg" alt="Taskly Logo" width="100" height="100">
 </p>
 
 <h1 align="center">💜 Taskly — Full-Stack Task Manager</h1>
@@ -9,14 +9,13 @@
 </p>
 
 <p align="center">
-  A full-stack task management application built with <strong>React, Spring Boot, and MySQL</strong>.
+  A full-stack task management application built with React, Spring Boot, and MySQL.
 </p>
 
 <p align="center">
   <a href="https://springboot-task-manager.vercel.app">🚀 Live Demo</a> ·
   <a href="https://github.com/mohitkpani/springboot-task-manager">GitHub Repository</a>
 </p>
-
 ---
 
 ## 🚀 Live Demo
